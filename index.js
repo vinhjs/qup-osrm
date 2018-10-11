@@ -39,6 +39,9 @@ if (cluster.isMaster) {
         cluster.fork();
     }
 } else {
+    app.get('/info', function(req, res){
+        res.send("OK");
+    })
     app.get('*', function(req, res){
         var zoneId = req.query.zoneId || 5002;        
         var url = req.url;
