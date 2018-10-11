@@ -31,6 +31,7 @@ var hash = {
     "5acc3ab1e4b08474e63d7ce9": {"port": 5003, "server": "AWS", "zone": "Winnipeg, Manitoba, Canada.", "fleetId": "cowboytaxi", "map": "http://download.geofabrik.de/north-america/canada/manitoba.html"},
     "5acc3b02e4b08474e63d7cea": {"port": 5003, "server": "AWS", "zone": "Brandon, Manitoba, Canada.", "fleetId": "cowboytaxi", "map": "http://download.geofabrik.de/north-america/canada/manitoba.html"},
     "595ca94ae4b0ce45a76255c7": {"port": 5002, "server": "AWS", "zone": "Calgary, Alberta, Canada.", "fleetId": "cowboytaxi", "map": "http://download.geofabrik.de/north-america/canada/alberta.html"},
+    "5a81451ce4b0939dfec451cf": {"port": 5017, "server": "AWS", "zone": "Brighton London", "fleetId": "tad", "map": "http://download.geofabrik.de/europe/great-britain/england.html"},
     "center": {"port": 5019, "server": "AWS", "zone": "", "fleetId": "", "map": ""},
 }
 
