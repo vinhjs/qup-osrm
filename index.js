@@ -6,8 +6,8 @@ var numCPUs = require('os').cpus().length;
 var request = require('request');
 
 var hash = {
-    "574e5cf7e4b0c51ccdeeb5a5": {"port": 5001, "server": "LAB, BETA", "zone": "VN", "fleetId": "migratecard", "map": ""},
-    "58dc73cae4b000b12bdc2448": {"port": 5001, "server": "LAB, BETA", "zone": "VN", "fleetId": "migratecard", "map": ""},
+    "574e5cf7e4b0c51ccdeeb5a5": {"port": 5001, "server": "LAB, BETA", "zone": "VN", "fleetId": "migratecard", "map": "http://download.geofabrik.de/asia/vietnam.html"},
+    "58dc73cae4b000b12bdc2448": {"port": 5001, "server": "LAB, BETA", "zone": "VN", "fleetId": "migratecard", "map": "http://download.geofabrik.de/asia/vietnam.html"},
     "571ebf81e4b0291be332a981": {"port": 5002, "server": "AWS", "zone": "Calgary, Alberta, Canada.", "fleetId": "tappcar", "map": "http://download.geofabrik.de/north-america/canada/alberta.html"},
     "56cd20a6e4b03efbf74e2273": {"port": 5002, "server": "AWS", "zone": "Edmonton, Alberta, Canada.", "fleetId": "tappcar", "map": "http://download.geofabrik.de/north-america/canada/alberta.html"},
     "5a87063be4b0939dfec452e1": {"port": 5003, "server": "AWS", "zone": "Winnipeg, Manitoba, Canada.", "fleetId": "tappcar", "map": "http://download.geofabrik.de/north-america/canada/manitoba.html"},
