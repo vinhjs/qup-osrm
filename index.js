@@ -6,8 +6,8 @@ var numCPUs = require('os').cpus().length;
 var request = require('request');
 
 var hash = {
-    "574e5cf7e4b0c51ccdeeb5a5": {"port": 5001, "zone": "", "fleetId": ""},
-    "58dc73cae4b000b12bdc2448": {"port": 5001, "zone": "", "fleetId": ""},
+    "574e5cf7e4b0c51ccdeeb5a5": {"port": 5001, "zone": "VN", "fleetId": ""},
+    "58dc73cae4b000b12bdc2448": {"port": 5001, "zone": "VN", "fleetId": ""},
     "571ebf81e4b0291be332a981": {"port": 5002, "zone": "Calgary, Alberta, Canada.", "fleetId": "tappcar"},
     "56cd20a6e4b03efbf74e2273": {"port": 5002, "zone": "Edmonton, Alberta, Canada.", "fleetId": "tappcar"},
     "5a87063be4b0939dfec452e1": {"port": 5003, "zone": "Winnipeg, Manitoba, Canada.", "fleetId": "tappcar"},
@@ -43,6 +43,7 @@ if (cluster.isMaster) {
         res.send("OK");
     })
     app.get('*', function(req, res){
+        console.log(req.query);
         var zoneId = req.query.zoneId || 5002;        
         if (zoneId && hash[zoneId]) {
             var url = req.url;
