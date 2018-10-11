@@ -40,7 +40,14 @@ if (cluster.isMaster) {
     }
 } else {
     app.get('/info', function(req, res){
-        res.send("OK");
+        var html = '<html><head><title>Zone info</title></head><body><table border="1">';
+        html+= '<tr><th>zoneId</th><th>port</th><th>zone</th><th>fleetId</tr>';
+        var keys = Object.keys(hash);
+        for(var i in keys){
+            html+='<tr><td>'+keys[i]+'</td><td>'+hash[keys[i]].port+'</td><td>'+hash[keys[i]].zone+'</td><td>'+hash[keys[i]].fleetId+'</td></tr>';
+        }
+        html+= '</table></body></html>';
+        res.send(html);
     })
     app.get('*', function(req, res){
         console.log(req.query);
