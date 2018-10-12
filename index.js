@@ -6,6 +6,8 @@ var numCPUs = require('os').cpus().length;
 var request = require('request');
 
 var hash = {
+    "559f71aee4b078015fe5427c": {"port": 5001, "server": "AWS", "zone": "DN", "fleetId": "zinzo", "map": "http://download.geofabrik.de/asia/vietnam.html"},
+    "567cc386e4b0d61df244d4a1": {"port": 5001, "server": "AWS", "zone": "DN", "fleetId": "qa", "map": "http://download.geofabrik.de/asia/vietnam.html"},
     "574e5cf7e4b0c51ccdeeb5a5": {"port": 5001, "server": "LAB, BETA", "zone": "VN", "fleetId": "migratecard", "map": "http://download.geofabrik.de/asia/vietnam.html"},
     "58dc73cae4b000b12bdc2448": {"port": 5001, "server": "LAB, BETA", "zone": "VN", "fleetId": "migratecard", "map": "http://download.geofabrik.de/asia/vietnam.html"},
     "571ebf81e4b0291be332a981": {"port": 5002, "server": "AWS", "zone": "Calgary, Alberta, Canada.", "fleetId": "tappcar", "map": "http://download.geofabrik.de/north-america/canada/alberta.html"},
