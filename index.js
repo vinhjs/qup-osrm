@@ -53,7 +53,6 @@ if (cluster.isMaster) {
         res.send(html);
     })
     app.get('*', function(req, res){
-        console.log(req.query);
         var zoneId = req.query.zoneId || 5002;        
         if (zoneId && hash[zoneId]) {
             var url = req.url;
@@ -74,6 +73,7 @@ if (cluster.isMaster) {
             newUrl = newUrl.replace("&fleetId="+req.query.fleetId, "");
             newUrl = newUrl.replace("&bookId="+req.query.bookId, "");
             newUrl = newUrl.replace("&zoneId="+req.query.zoneId, "");
+            console.log(new Date().toISOString() + " : " + url);
             request({url: newUrl, json: true}, function(error, response, body){
                 res.set('Content-Type', 'application/json');
                 res.send(body);
