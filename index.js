@@ -37,13 +37,12 @@ var hash = {
     "595469c2e4b0ce45a76254eb": {"port": 5018, "server": "AWS", "zone": "Ghana", "fleetId": "uru", "map": "http://download.geofabrik.de/africa/ghana.html"},
     "59b66847e4b0ab1233e442e4": {"port": 5020, "server": "AWS", "zone": "Abuja, FCT, Nigeria", "fleetId": "uru", "map": "http://download.geofabrik.de/africa/nigeria.html"},
     "5af01560e4b0d944e3a1f02d": {"port": 5020, "server": "AWS", "zone": "Rivers State, Nigeria", "fleetId": "uru", "map": "http://download.geofabrik.de/africa/nigeria.html"},
-
     "5af0163de4b0d944e3a1f030": {"port": 5020, "server": "AWS", "zone": "Enugu State, Nigeria", "fleetId": "uru", "map": "http://download.geofabrik.de/africa/nigeria.html"},
-    "5af016b6e4b0d944e3a1f031": {"port": 5020, "server": "AWS", "zone": "Rivers State, Nigeria", "fleetId": "uru", "map": "http://download.geofabrik.de/africa/nigeria.html"},
-    "5af01755e4b0d944e3a1f032": {"port": 5020, "server": "AWS", "zone": "Rivers State, Nigeria", "fleetId": "uru", "map": "http://download.geofabrik.de/africa/nigeria.html"},
-    "5af017dae4b0d944e3a1f033": {"port": 5020, "server": "AWS", "zone": "Rivers State, Nigeria", "fleetId": "uru", "map": "http://download.geofabrik.de/africa/nigeria.html"},
-    "5a288567e4b0974db584c0a4": {"port": 5020, "server": "AWS", "zone": "Rivers State, Nigeria", "fleetId": "uru", "map": "http://download.geofabrik.de/africa/nigeria.html"},
-    "5af015a8e4b0d944e3a1f02e": {"port": 5020, "server": "AWS", "zone": "Rivers State, Nigeria", "fleetId": "uru", "map": "http://download.geofabrik.de/africa/nigeria.html"},
+    "5af016b6e4b0d944e3a1f031": {"port": 5020, "server": "AWS", "zone": "Anambra State", "fleetId": "uru", "map": "http://download.geofabrik.de/africa/nigeria.html"},
+    "5af01755e4b0d944e3a1f032": {"port": 5020, "server": "AWS", "zone": "Cross River State", "fleetId": "uru", "map": "http://download.geofabrik.de/africa/nigeria.html"},
+    "5af017dae4b0d944e3a1f033": {"port": 5020, "server": "AWS", "zone": "Akwa Ibom State", "fleetId": "uru", "map": "http://download.geofabrik.de/africa/nigeria.html"},
+    "5a288567e4b0974db584c0a4": {"port": 5020, "server": "AWS", "zone": "IMO State", "fleetId": "uru", "map": "http://download.geofabrik.de/africa/nigeria.html"},
+    "5af015a8e4b0d944e3a1f02e": {"port": 5020, "server": "AWS", "zone": "Lagos State", "fleetId": "uru", "map": "http://download.geofabrik.de/africa/nigeria.html"},
     "center": {"port": 5019, "server": "AWS", "zone": "", "fleetId": "", "map": ""},
 }
 
