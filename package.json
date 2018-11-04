@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/vinhjs/qup-osrm#readme",
   "dependencies": {
+    "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "http-auth": "^3.2.3",
     "request": "^2.88.0"
   }
 }
