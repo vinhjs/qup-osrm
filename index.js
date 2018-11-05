@@ -116,20 +116,18 @@ if (cluster.isMaster) {
             newUrl = newUrl.replace("&fleetId="+req.query.fleetId, "");
             newUrl = newUrl.replace("&bookId="+req.query.bookId, "");
             newUrl = newUrl.replace("&zoneId="+req.query.zoneId, "");
-            console.log(new Date().toISOString() + " : " + url);
+            console.log(new Date().toISOString() + " => " + url);
             request({url: newUrl, json: true}, function(error, response, body){
                 res.set('Content-Type', 'application/json');
                 res.send(body);
             })
         } else {
-            //
-            console.log("NO DATA %s", req.headers['x-real-ip']);
             var url = req.url;
             var newUrl = "http://router.project-osrm.org"+req.url;
             newUrl = newUrl.replace("&fleetId="+req.query.fleetId, "");
             newUrl = newUrl.replace("&bookId="+req.query.bookId, "");
             newUrl = newUrl.replace("&zoneId="+req.query.zoneId, "");
-            console.log(new Date().toISOString() + " : " + url);
+            console.log(new Date().toISOString() +" NO DATA %s", req.headers['x-real-ip'] + " => " + url);
             request({url: newUrl, json: true}, function(error, response, body){
                 res.set('Content-Type', 'application/json');
                 res.send(body);
