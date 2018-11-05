@@ -123,7 +123,7 @@ if (cluster.isMaster) {
             })
         } else {
             //
-            console.log("NO DATA");
+            console.log("NO DATA %s", req.headers['x-real-ip']);
             var url = req.url;
             var newUrl = "http://router.project-osrm.org"+req.url;
             newUrl = newUrl.replace("&fleetId="+req.query.fleetId, "");
