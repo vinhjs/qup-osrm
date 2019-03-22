@@ -119,6 +119,8 @@ if (cluster.isMaster) {
             newUrl = newUrl.replace("?bookId="+req.query.bookId, "");
             newUrl = newUrl.replace("&zoneId="+req.query.zoneId, "");
             newUrl = newUrl.replace("?zoneId="+req.query.zoneId, "");
+            newUrl = newUrl.replace("&port="+req.query.port, "");
+            newUrl = newUrl.replace("?port="+req.query.port, "");
             console.log(new Date().toISOString() + " => " + url);
             request({url: newUrl, json: true}, function(error, response, body){
                 res.set('Content-Type', 'application/json');
@@ -133,6 +135,8 @@ if (cluster.isMaster) {
             newUrl = newUrl.replace("?bookId="+req.query.bookId, "");
             newUrl = newUrl.replace("&zoneId="+req.query.zoneId, "");
             newUrl = newUrl.replace("?zoneId="+req.query.zoneId, "");
+            newUrl = newUrl.replace("&port="+req.query.port, "");
+            newUrl = newUrl.replace("?port="+req.query.port, "");
             console.log(new Date().toISOString() +" NO DATA %s", req.headers['x-real-ip'] + " => " + url);
             request({url: newUrl, json: true}, function(error, response, body){
                 res.set('Content-Type', 'application/json');
