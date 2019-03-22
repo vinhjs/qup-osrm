@@ -109,10 +109,10 @@ if (cluster.isMaster) {
         res.send(html);
     })
     app.get('*', function(req, res){
-        var zoneId = req.query.zoneId || 5002;        
-        if (zoneId && hash[zoneId]) {
+        var port = req.query.port || 0;
+        if (port) {
             var url = req.url;
-            var newUrl = "http://localhost:"+hash[zoneId].port+req.url;
+            var newUrl = "http://localhost:"+port+req.url;
             newUrl = newUrl.replace("&fleetId="+req.query.fleetId, "");
             newUrl = newUrl.replace("?fleetId="+req.query.fleetId, "");
             newUrl = newUrl.replace("&bookId="+req.query.bookId, "");
