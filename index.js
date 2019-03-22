@@ -127,21 +127,40 @@ if (cluster.isMaster) {
                 res.send(body);
             })
         } else {
-            var url = req.url;
-            var newUrl = "http://router.project-osrm.org"+req.url;
-            newUrl = newUrl.replace("&fleetId="+req.query.fleetId, "");
-            newUrl = newUrl.replace("?fleetId="+req.query.fleetId, "");
-            newUrl = newUrl.replace("&bookId="+req.query.bookId, "");
-            newUrl = newUrl.replace("?bookId="+req.query.bookId, "");
-            newUrl = newUrl.replace("&zoneId="+req.query.zoneId, "");
-            newUrl = newUrl.replace("?zoneId="+req.query.zoneId, "");
-            newUrl = newUrl.replace("&port="+req.query.port, "");
-            newUrl = newUrl.replace("?port="+req.query.port, "");
-            console.log(new Date().toISOString() +" NO DATA %s", req.headers['x-real-ip'] + " => " + url);
-            request({url: newUrl, json: true}, function(error, response, body){
-                res.set('Content-Type', 'application/json');
-                res.send(body);
-            })
+            var zoneId = req.query.zoneId || 5002;        
+            if (zoneId && hash[zoneId]) {
+                var url = req.url;
+                var newUrl = "http://localhost:"+hash[zoneId].port+req.url;
+                newUrl = newUrl.replace("&fleetId="+req.query.fleetId, "");
+                newUrl = newUrl.replace("?fleetId="+req.query.fleetId, "");
+                newUrl = newUrl.replace("&bookId="+req.query.bookId, "");
+                newUrl = newUrl.replace("?bookId="+req.query.bookId, "");
+                newUrl = newUrl.replace("&zoneId="+req.query.zoneId, "");
+                newUrl = newUrl.replace("?zoneId="+req.query.zoneId, "");
+                newUrl = newUrl.replace("&port="+req.query.port, "");
+                newUrl = newUrl.replace("?port="+req.query.port, "");
+                console.log(new Date().toISOString() + " => " + url);
+                request({url: newUrl, json: true}, function(error, response, body){
+                    res.set('Content-Type', 'application/json');
+                    res.send(body);
+                })
+            } else {
+                var url = req.url;
+                var newUrl = "http://router.project-osrm.org"+req.url;
+                newUrl = newUrl.replace("&fleetId="+req.query.fleetId, "");
+                newUrl = newUrl.replace("?fleetId="+req.query.fleetId, "");
+                newUrl = newUrl.replace("&bookId="+req.query.bookId, "");
+                newUrl = newUrl.replace("?bookId="+req.query.bookId, "");
+                newUrl = newUrl.replace("&zoneId="+req.query.zoneId, "");
+                newUrl = newUrl.replace("?zoneId="+req.query.zoneId, "");
+                newUrl = newUrl.replace("&port="+req.query.port, "");
+                newUrl = newUrl.replace("?port="+req.query.port, "");
+                console.log(new Date().toISOString() +" NO DATA %s", req.headers['x-real-ip'] + " => " + url);
+                request({url: newUrl, json: true}, function(error, response, body){
+                    res.set('Content-Type', 'application/json');
+                    res.send(body);
+                })
+            }
         }
         
     })
